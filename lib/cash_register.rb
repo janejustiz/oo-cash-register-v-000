@@ -3,9 +3,9 @@ class CashRegister
   @@items = []
 
 
-  def initialize(discount = 1)
+  def initialize(discount = 0)
     @total = 0
-    @discount = discount
+    @discount = discount/100
   end
 
   def total
@@ -13,12 +13,12 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    @total += price * quantity * (1 - (@discount/100.to_f))
+    @total += price * quantity *
     @@items << title
   end
 
   def apply_discount
-    if discount == 1
+    if discount == 0
       puts "There is no discount to apply."
     else
       "After the discount, the total comes to $#{@total}."
