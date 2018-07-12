@@ -13,7 +13,7 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    @total += (price * quantity * number_to_percentage(discount))
+    @total += (price * quantity)
     @@items << title
   end
 
