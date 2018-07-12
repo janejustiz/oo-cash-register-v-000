@@ -3,6 +3,10 @@ class CashRegister
 
   @@transactions = []
 
+  def initialize(total)
+    @total = total
+  end
+
   def total
   end
 
