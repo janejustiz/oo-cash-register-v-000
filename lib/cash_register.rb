@@ -3,7 +3,7 @@ class CashRegister
   @@items = []
 
 
-  def initialize(discount = nil)
+  def initialize(discount = 0)
     @total = 0
     @discount = discount
   end
@@ -18,7 +18,7 @@ class CashRegister
   end
 
   def apply_discount
-    if @discount = nil
+    if @discount = 0
       puts "There is no discount to apply."
     else
       "After the discount, the total comes to $ #{@total * @discount}."
