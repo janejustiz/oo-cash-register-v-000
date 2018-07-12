@@ -13,7 +13,8 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    @total += (price * quantity)
+    percent = 1 - ".#{discount}".to_i
+    @total += (price * quantity * percent)
     @@items << title
   end
 
@@ -21,7 +22,7 @@ class CashRegister
     if self.discount = 0
       puts "There is no discount to apply."
     else
-      "After the discount, the total comes to $ #{@total * @discount}."
+      "After the discount, the total comes to $ #{@total}."
     end
   end
 
