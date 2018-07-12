@@ -2,7 +2,8 @@ class CashRegister
   attr_accessor :total
 
   @@transactions = []
-
+  @total = 0
+  
   def initialize(total)
     @total = total
   end
