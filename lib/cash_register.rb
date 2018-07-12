@@ -16,10 +16,10 @@ class CashRegister
   end
 
   def apply_discount
-    if @discount.to_i > 0
-      "After the discount, the total comes to $#{total.times(1 - @discount.to_i)}."
-    else
+    if @discount = 0
       puts "There is no discount to apply."
+    else
+      "After the discount, the total comes to $#{@total - @total.times(@discount.to_i)}."
     end
   end
 
