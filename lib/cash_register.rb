@@ -21,7 +21,7 @@ class CashRegister
     if @discount = nil
       puts "There is no discount to apply."
     else
-      "After the discount, the total comes to $#{@total - @total.times(@discount.to_i)}."
+      "After the discount, the total comes to $#{@total * discount}."
     end
   end
 
