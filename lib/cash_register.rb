@@ -4,6 +4,7 @@ class CashRegister
 
   def initialize(total = 0, discount = 0)
     @total = total
+    @discount = discount
   end
 
   def total
@@ -18,6 +19,7 @@ class CashRegister
   def apply_discount
     if @discount = 0
       puts "There is no discount to apply."
+
     else
       "After the discount, the total comes to $#{@total - @total.times(@discount.to_i)}."
     end
