@@ -4,8 +4,8 @@ class CashRegister
   @@transactions = []
   @total = 0
   
-  def initialize(total)
-    @total = total
+  def initialize
+    
   end
 
   def total
