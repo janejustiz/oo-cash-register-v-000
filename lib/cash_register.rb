@@ -13,11 +13,12 @@ class CashRegister
   end
 
   def add_item(title, price, quantity = 1)
-    @total += (price * quantity)
+    @total += (price * quantity * (1 - (@discount/100.to_f))
     @@items << title
   end
 
   def apply_discount
+
     if discount == 1
       puts "There is no discount to apply."
     else
