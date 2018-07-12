@@ -1,5 +1,5 @@
 class CashRegister
-  attr_accessor :name
+  attr_accessor :total
 
   @@transactions = []
 
