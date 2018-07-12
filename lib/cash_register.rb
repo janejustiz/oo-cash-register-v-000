@@ -16,7 +16,11 @@ class CashRegister
   end
 
   def apply_discount
-
+    if
+      "After the discount, the total comes to $#{}."
+    else
+      puts "There is no discount to apply."
+    end
   end
 
   def items
